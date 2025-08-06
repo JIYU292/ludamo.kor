@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索宇宙的奥秘</title>
+    <style>
+        /* --- 全局样式 --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* 深邃的黑色背景，模拟宇宙 */
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #fdd835; /* 金黄色，象征星光 */
+            font-weight: normal;
+            text-align: center;
+        }
+
+        a {
+            color: #81d4fa; /* 浅蓝色，象征星云 */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- 头部 --- */
+        .header {
+            background-image: url('https://images.unsplash.com/photo-1506318137072-298b8ab11aa5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* 叠加一层黑色，使文字更清晰 */
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* --- 内容区域通用样式 --- */
+        .content-section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* --- 核心概念卡片 --- */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .concept-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .concept-card h3 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #81d4fa;
+        }
+
+        .concept-card p {
+            font-size: 1rem;
+            color: #eee;
+        }
+
+        /* --- 太阳系概览 --- */
+        .solar-system-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .solar-system-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .solar-system-info li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .solar-system-info li:last-child {
+            border-bottom: none;
+        }
+
+        /* --- 探索宇宙的方式 --- */
+        .exploration-methods {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .exploration-methods ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: #eee;
+        }
+
+        /* --- 天文现象列表 --- */
+        .phenomena-list {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .phenomena-list ul {
+            list-style: square;
+            padding-left: 20px;
+            color: #eee;
+        }
+
+        /* --- 页脚 --- */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            background-color: #111;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>浩瀚宇宙，等你探索</h1>
+            <p>了解我们所处的宇宙，从行星到星系，再到宇宙的起源与未来。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="content-section">
+            <h2 class="section-title">宇宙的基石</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h3>行星</h3>
+                    <p>围绕恒星运行的、自身不发光的较大天体。我们的地球就是一颗行星。</p>
+                </div>
+                <div class="concept-card">
+                    <h3>恒星</h3>
+                    <p>由巨大的引力凝聚在一起发光发热的天体。我们的太阳就是一颗恒星。</p>
+                </div>
+                <div class="concept-card">
+                    <h3>卫星</h3>
+                    <p>围绕行星运行的天然天体。月球是地球唯一的天然卫星。</p>
+                </div>
+                <div class="concept-card">
+                    <h3>星系</h3>
+                    <p>由数千亿颗恒星、星云、星际气体和尘埃组成的巨大系统。我们太阳系所在的银河系就是一个螺旋星系。</p>
+                </div>
+                <div class="concept-card">
+                    <h3>星云</h3>
+                    <p>宇宙中由气体和尘埃组成的巨大云状结构，是恒星的诞生地，也是恒星死亡后的归宿。</p>
+                </div>
+                <div class="concept-card">
+                    <h3>黑洞</h3>
+                    <p>宇宙中引力极强的区域，连光都无法逃脱。它们可能是大质量恒星坍缩形成的。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">我们的太阳系</h2>
+            <div class="solar-system-info">
+                <h3>太阳系的主要成员：</h3>
+                <ul>
+                    <li><strong>太阳：</strong> 位于太阳系中心的恒星，是地球能量的主要来源。</li>
+                    <li><strong>内行星：</strong> 水星、金星、地球、火星，它们主要是由岩石构成的。</li>
+                    <li><strong>小行星带：</strong> 位于火星和木星之间，包含无数形状不规则的小行星。</li>
+                    <li><strong>外行星（气态巨行星）：</strong> 木星、土星，主要由氢和氦组成。</li>
+                    <li><strong>外行星（冰巨星）：</strong> 天王星、海王星，含有较多较重的元素。</li>
+                    <li><strong>柯伊伯带：</strong> 位于海王星轨道之外，包含大量冰冻的小天体，冥王星曾经被认为是其中的一员。</li>
+                    <li><strong>奥尔特云：</strong> 理论上包围着太阳系的最外层，是长周期彗星的故乡。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">探索宇宙的工具</h2>
+            <div class="exploration-methods">
+                <h3>人类探索宇宙的主要手段：</h3>
+                <ul>
+                    <li><strong>望远镜：</strong> 包括光学望远镜和射电望远镜，帮助我们收集来自遥远天体的光线和无线电波。</li>
+                    <li><strong>空间望远镜：</strong> 如哈勃太空望远镜和詹姆斯·韦伯太空望远镜，不受地球大气干扰，能观测到更清晰、更深远的宇宙景象。</li>
+                    <li><strong>宇宙飞船和探测器：</strong> 被送往太空，对太阳系内的行星、卫星和小行星进行近距离探测和研究。</li>
+                    <li><strong>载人航天：</strong> 人类亲自进入太空，进行科学实验和探索活动。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">令人惊叹的天文现象</h2>
+            <div class="phenomena-list">
+                <h3>一些值得期待的天文事件：</h3>
+                <ul>
+                    <li><strong>流星雨：</strong> 大量流星体进入地球大气层时燃烧发光，形成壮观的夜空景象。</li>
+                    <li><strong>日食和月食：</strong> 当太阳、地球和月球排列成一条直线时发生的特殊天象。</li>
+                    <li><strong>彗星的回归：</strong> 一些周期性彗星会按照预定的轨道再次靠近地球，为我们带来难得一见的“扫帚星”。</li>
+                    <li><strong>行星冲日：</strong> 外行星运行到与太阳、地球大致成一条直线的状态，是观测这些行星的最佳时机。</li>
+                    <li><strong>极光：</strong> 在地球磁极附近的高空中，带电粒子与大气分子碰撞发光形成的绚丽景象。</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 宇宙探索者。All rights reserved.</p>
+        <p>部分图片来源于 <a href="https://unsplash.com/" target="_blank">Unsplash</a>。</p>
+    </footer>
+
+</body>
+</html>
